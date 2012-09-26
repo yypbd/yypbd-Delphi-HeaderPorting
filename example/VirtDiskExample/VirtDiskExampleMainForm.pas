@@ -289,7 +289,7 @@ end;
 
 procedure TFormVirtDiskExampleMain.FormCreate(Sender: TObject);
 begin
-  //
+  Caption := Application.Title;
 end;
 
 function TFormVirtDiskExampleMain.GetPhysVHD(const AFilePath: string): Boolean;

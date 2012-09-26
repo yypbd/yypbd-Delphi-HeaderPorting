@@ -2,7 +2,7 @@ object FormVirtDiskExampleMain: TFormVirtDiskExampleMain
   Left = 0
   Top = 0
   Caption = 'FormVirtDiskExampleMain'
-  ClientHeight = 183
+  ClientHeight = 166
   ClientWidth = 441
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET

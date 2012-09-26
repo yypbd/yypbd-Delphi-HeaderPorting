@@ -10,6 +10,7 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  Application.Title := 'VirtDisk Example';
   Application.CreateForm(TFormVirtDiskExampleMain, FormVirtDiskExampleMain);
   Application.Run;
 end.
