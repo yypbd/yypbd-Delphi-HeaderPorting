@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{CD45335E-18BD-4B71-B4BB-D640145F52B5}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="FirewallExample\FirewallExample.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="VirtDiskExample\VirtDiskExample.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="FirewallExample">
+			<MSBuild Projects="FirewallExample\FirewallExample.dproj"/>
+		</Target>
+		<Target Name="FirewallExample:Clean">
+			<MSBuild Targets="Clean" Projects="FirewallExample\FirewallExample.dproj"/>
+		</Target>
+		<Target Name="FirewallExample:Make">
+			<MSBuild Targets="Make" Projects="FirewallExample\FirewallExample.dproj"/>
+		</Target>
+		<Target Name="VirtDiskExample">
+			<MSBuild Projects="VirtDiskExample\VirtDiskExample.dproj"/>
+		</Target>
+		<Target Name="VirtDiskExample:Clean">
+			<MSBuild Targets="Clean" Projects="VirtDiskExample\VirtDiskExample.dproj"/>
+		</Target>
+		<Target Name="VirtDiskExample:Make">
+			<MSBuild Targets="Make" Projects="VirtDiskExample\VirtDiskExample.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="FirewallExample;VirtDiskExample"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="FirewallExample:Clean;VirtDiskExample:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="FirewallExample:Make;VirtDiskExample:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

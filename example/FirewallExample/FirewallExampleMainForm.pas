@@ -153,11 +153,6 @@ begin
 //    Enumerator.QueryInterface( __uuidof(IEnumVARIANT), Variant );
     hr := Enumerator.QueryInterface( StringToGUID('{00020404-0000-0000-C000-000000000046}'), pVariant );
 
-    if Succeeded( 1 ) then
-    begin
-      ShowMessage( '' );
-    end;
-
     while Succeeded(hr) and (hr <> S_FALSE) do
     begin
       hr := pVariant.Next( 1, pVar, cFetched );
@@ -169,7 +164,7 @@ begin
         if SUCCEEDED( hr ) then
         begin
           // 전체를 출력할 것인지... 부분만 출력할것인지
-          // if Rule.Profiles and FwPolicy2.CurrentProfileTypes <> 0 then
+          if Rule.Profiles and FwPolicy2.CurrentProfileTypes <> 0 then
           // 그룹 맞는것 출력
           // if ARule.Grouping = '@firewallapi.dll,-23255' then
             PrintRuleToMemo( Rule );
