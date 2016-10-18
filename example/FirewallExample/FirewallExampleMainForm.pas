@@ -1,4 +1,4 @@
-unit FirewallExampleMainForm;
+ï»¿unit FirewallExampleMainForm;
 
 interface
 
@@ -85,7 +85,7 @@ begin
 
     InterfaceArray := VarArrayCreate( [0, 0], varVariant );
     InterfaceArray[0] := 'Local Area Connection';
-//    InterfaceArray[0] := '·ÎÄÃ ¿µ¿ª ¿¬°á';
+//    InterfaceArray[0] := 'ë¡œì»¬ ì˜ì—­ ì—°ê²°';
 
     if (CurrentProfiles and NET_FW_PROFILE2_DOMAIN) <> 0 then
       FwPolicy2.ExcludedInterfaces[NET_FW_PROFILE2_DOMAIN] := InterfaceArray;
@@ -163,9 +163,9 @@ begin
 
         if SUCCEEDED( hr ) then
         begin
-          // ÀüÃ¼¸¦ Ãâ·ÂÇÒ °ÍÀÎÁö... ºÎºĞ¸¸ Ãâ·ÂÇÒ°ÍÀÎÁö
+          // ì „ì²´ë¥¼ ì¶œë ¥í•  ê²ƒì¸ì§€... ë¶€ë¶„ë§Œ ì¶œë ¥í• ê²ƒì¸ì§€
           if Rule.Profiles and FwPolicy2.CurrentProfileTypes <> 0 then
-          // ±×·ì ¸Â´Â°Í Ãâ·Â
+          // ê·¸ë£¹ ë§ëŠ”ê²ƒ ì¶œë ¥
           // if ARule.Grouping = '@firewallapi.dll,-23255' then
             PrintRuleToMemo( Rule );
         end;
@@ -314,7 +314,7 @@ begin
 
     InterfaceArray := VarArrayCreate( [0, 0], varVariant );
     InterfaceArray[0] := 'Local Area Connection';
-//    InterfaceArray[0] := '·ÎÄÃ ¿µ¿ª ¿¬°á';
+//    InterfaceArray[0] := 'ë¡œì»¬ ì˜ì—­ ì—°ê²°';
 
     NewRule.Name := 'Per_Interface_Rule';
     NewRule.Description := 'Add a Per Interface Rule';
@@ -566,7 +566,7 @@ begin
     MemoLog.Lines.Add('  Interfaces:         All')
   else
   begin
-    { TODO : Interfaces Ãâ·Â }
+    { TODO : Interfaces ì¶œë ¥ }
     for I := VarArrayLowBound(InterfaceArray, 0) to VarArrayHighBound(InterfaceArray, 0) do
     begin
       MemoLog.Lines.Add('       ' + InterfaceArray[i]);

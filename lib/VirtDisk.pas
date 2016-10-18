@@ -1,4 +1,4 @@
-unit VirtDisk;
+﻿unit VirtDisk;
 
 interface
 

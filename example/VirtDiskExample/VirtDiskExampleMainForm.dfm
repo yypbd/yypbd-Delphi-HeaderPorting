@@ -1,4 +1,4 @@
-object FormVirtDiskExampleMain: TFormVirtDiskExampleMain
+﻿object FormVirtDiskExampleMain: TFormVirtDiskExampleMain
   Left = 0
   Top = 0
   Caption = 'FormVirtDiskExampleMain'

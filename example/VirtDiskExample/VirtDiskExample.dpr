@@ -1,4 +1,4 @@
-program VirtDiskExample;
+﻿program VirtDiskExample;
 
 uses
   Vcl.Forms,

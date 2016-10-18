@@ -1,4 +1,4 @@
-unit VirtDiskExampleMainForm;
+﻿unit VirtDiskExampleMainForm;
 
 interface
 

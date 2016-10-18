@@ -1,4 +1,4 @@
-object FormFirewallExampleMain: TFormFirewallExampleMain
+﻿object FormFirewallExampleMain: TFormFirewallExampleMain
   Left = 0
   Top = 0
   Caption = 'FormFirewallExampleMain'
